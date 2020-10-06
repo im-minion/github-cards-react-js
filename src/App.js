@@ -21,7 +21,6 @@ class App extends React.Component {
 
   //   };
   // }
-4
 
 // Option: 2
 

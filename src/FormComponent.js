@@ -9,9 +9,16 @@ class FormComponent extends React.Component {
     handleSubmit = async (event) => {
         event.preventDefault();
         console.log(this.state.userName);
-        // const resp = await fetch.get(`https://api.github.com/users/${this.state.userName}`);
-        // console.log(resp);
+        const response = await fetch(`https://api.github.com/users/${this.state.userName}`, {
+            method: 'GET', // string or object
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const myJson = await response.json(); //extract JSON from the http response
+        console.log(myJson);
     }
+    
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
