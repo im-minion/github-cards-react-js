@@ -6,7 +6,6 @@ import FormComponent from './FormComponent';
 class App extends React.Component {
 
   // Option: 1
-
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -22,9 +21,12 @@ class App extends React.Component {
   }
 
   addNewProfile = (profileData) => {
+    // OPTION 1 : (not working.. :())
     // this.setState(prevState => ({
     //   profiles: [...prevState, profileData]
     // }));
+
+    // OPTION 2
 
     this.setState({
       profiles: [...this.state.profiles, profileData]
